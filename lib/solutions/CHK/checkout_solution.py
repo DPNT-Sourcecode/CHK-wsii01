@@ -20,6 +20,7 @@ def checkout(skus):
 
     eligible_A = 250
     eligible_B = 60
+    eligible_E = 80
     
     sku_dict = defaultdict(int)
     for item in skus:
@@ -42,6 +43,7 @@ def checkout(skus):
         sku_dict['A'] -= additional_disc_fac * 20
     disc_fac = sku_dict['B'] // eligible_B
     sku_dict['B'] -= disc_fac * disc_B
+    disc_fac = sku_dict['E'] // eligible_E
     
     sum = 0
     for value in sku_dict.values():
@@ -51,4 +53,5 @@ def checkout(skus):
         
 
     
+
 
