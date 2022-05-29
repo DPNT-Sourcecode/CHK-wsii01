@@ -142,7 +142,7 @@ def checkout(skus):
    
     sorted_group = {k:v for k, v in sorted(
         group_dict.items(), key=lambda element: element[1], reverse=True)}
-
+    print(sorted_group)
     count = 0
     group_sum = 0
     for k, v in sorted_group.items():
@@ -164,4 +164,5 @@ def checkout(skus):
         
 
     
+
 
