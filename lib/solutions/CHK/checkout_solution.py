@@ -41,7 +41,7 @@ def checkout(skus):
     disc_B = 15
     disc_F = price['F']
     disc_H = 20
-    disc_K = 10
+    disc_K = 20
     disc_P = 50
     disc_Q = 10
     disc_U = price['U']
@@ -52,7 +52,7 @@ def checkout(skus):
     eligible_E = 80
     eligible_F = 30
     eligible_H = 100
-    eligible_K = 160
+    eligible_K = 140
     eligible_N = 120
     eligible_P = 250
     eligible_Q = 90
@@ -132,3 +132,4 @@ def checkout(skus):
         
 
     
+
