@@ -153,7 +153,7 @@ def checkout(skus):
             group_sum += (limit - count) * k
             break;
 
-    group_disc_total = (limit / 3) * 45
+    group_disc_total = (limit // 3) * 45
         
             
     sum = 0
@@ -164,3 +164,4 @@ def checkout(skus):
         
 
     
+
