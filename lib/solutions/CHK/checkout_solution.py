@@ -20,7 +20,7 @@ def checkout(skus):
     price['H'] = 10
     price['I'] = 35
     price['J'] = 60
-    price['K'] = 80
+    price['K'] = 70
     price['L'] = 90
     price['M'] = 15
     price['N'] = 40
@@ -28,14 +28,14 @@ def checkout(skus):
     price['P'] = 50
     price['Q'] = 30
     price['R'] = 50
-    price['S'] = 30
+    price['S'] = 20
     price['T'] = 20
     price['U'] = 40
     price['V'] = 50
     price['W'] = 20
-    price['X'] = 90
-    price['Y'] = 10
-    price['Z'] = 50
+    price['X'] = 17
+    price['Y'] = 20
+    price['Z'] = 21
 
     disc_A = 50
     disc_B = 15
