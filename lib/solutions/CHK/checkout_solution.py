@@ -4,6 +4,8 @@ from collections import defaultdict
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
+    if len(skus) == 0:
+        return 0
     if not bool(re.match('^[A-D]+$', skus)):
         return -1
 
@@ -42,6 +44,7 @@ def checkout(skus):
         
 
     
+
 
 
 
