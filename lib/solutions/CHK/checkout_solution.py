@@ -43,9 +43,10 @@ def checkout(skus):
         sku_dict['A'] -= additional_disc_fac * 20
     disc_fac = sku_dict['B'] // eligible_B
     sku_dict['B'] -= disc_fac * disc_B
-    disc_fac = sku_dict['E'] // eligible_E
-    additional_disc = disc_fac * price_B
-    sku_dict['B'] -= additional_disc
+    if sku_dict['B'] > 0:
+        disc_fac = sku_dict['E'] // eligible_E
+        additional_disc = disc_fac * price_B
+        sku_dict['B'] -= additional_disc
     
     
     sum = 0
@@ -56,8 +57,3 @@ def checkout(skus):
         
 
     
-
-
-
-
-
