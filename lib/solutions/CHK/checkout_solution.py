@@ -6,7 +6,7 @@ from collections import defaultdict
 def checkout(skus):
     if len(skus) == 0:
         return 0
-    if not bool(re.match('^[A-E]+$', skus)):
+    if not bool(re.match('^[A-F]+$', skus)):
         return -1
 
     price_A = 50
@@ -66,4 +66,5 @@ def checkout(skus):
         
 
     
+
 
