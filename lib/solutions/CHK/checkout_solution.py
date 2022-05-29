@@ -13,11 +13,12 @@ def checkout(skus):
     price_B = 30
     price_C = 20
     price_D = 15
+    price_E = 40
 
-    disc_A = 20
+    disc_A = 50
     disc_B = 15
 
-    eligible_A = 150
+    eligible_A = 250
     eligible_B = 60
     
     sku_dict = defaultdict(int)
@@ -30,6 +31,8 @@ def checkout(skus):
             sku_dict[item] += price_C
         if item == 'D':
             sku_dict[item] += price_D
+        if item == 'E':
+            sku_dict[item] += price_E
 
     disc_fac = sku_dict['A'] // eligible_A
     sku_dict['A'] -= disc_fac * disc_A
@@ -44,3 +47,4 @@ def checkout(skus):
         
 
     
+
