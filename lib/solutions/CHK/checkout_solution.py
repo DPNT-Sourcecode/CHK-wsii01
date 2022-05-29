@@ -9,32 +9,33 @@ def checkout(skus):
     if not bool(re.match('^[A-Z]+$', skus)):
         return -1
 
-    price_A = 50
-    price_B = 30
-    price_C = 20
-    price_D = 15
-    price_E = 40
-    price_F = 10
-    price_G = 20
-    price_H = 10
-    price_I = 35
-    price_J = 60
-    price_K = 80
-    price_L = 90
-    price_M = 15
-    price_N = 40
-    price_O = 10
-    price_P = 50
-    price_Q = 30
-    price_R = 50
-    price_S = 30
-    price_T = 20
-    price_U = 40
-    price_V = 50
-    price_W = 20
-    price_X = 90
-    price_Y = 10
-    price_Z = 50
+    price = defaultdict(int)
+    price['A'] = 50
+    price['B'] = 30
+    price['C'] = 20
+    price['D'] = 15
+    price['E'] = 40
+    price['F'] = 10
+    price['G'] = 20
+    price['H'] = 10
+    price['I'] = 35
+    price['J'] = 60
+    price['K'] = 80
+    price['L'] = 90
+    price['M'] = 15
+    price['N'] = 40
+    price['O'] = 10
+    price['P'] = 50
+    price['Q'] = 30
+    price['R'] = 50
+    price['S'] = 30
+    price['T'] = 20
+    price['U'] = 40
+    price['V'] = 50
+    price['W'] = 20
+    price['X'] = 90
+    price['Y'] = 10
+    price['Z'] = 50
 
     disc_A = 50
     disc_B = 15
@@ -55,18 +56,7 @@ def checkout(skus):
     
     sku_dict = defaultdict(int)
     for item in skus:
-        if item == 'A':
-            sku_dict[item] += price_A
-        if item == 'B':
-            sku_dict[item] += price_B
-        if item == 'C':
-            sku_dict[item] += price_C
-        if item == 'D':
-            sku_dict[item] += price_D
-        if item == 'E':
-            sku_dict[item] += price_E
-        if item == 'F':
-            sku_dict[item] += price_F
+        sku_dict[item] += price[item]
 
     disc_fac = sku_dict['A'] // eligible_A
     sku_dict['A'] -= disc_fac * disc_A
@@ -94,3 +84,4 @@ def checkout(skus):
         
 
     
+
