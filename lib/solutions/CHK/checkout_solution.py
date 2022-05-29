@@ -57,7 +57,7 @@ def checkout(skus):
     eligible_P = 250
     eligible_Q = 90
     eligible_R = 150
-    eligible_U = 120
+    eligible_U = 160
     eligible_V = 150
     
     sku_dict = defaultdict(int)
@@ -132,3 +132,4 @@ def checkout(skus):
         
 
     
+
