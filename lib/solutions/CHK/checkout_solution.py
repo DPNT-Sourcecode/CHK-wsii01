@@ -141,8 +141,8 @@ def checkout(skus):
         limit = total_group - remainder
    
     sorted_group = {k:v for k, v in sorted(
-        group_dict.items(), key=lambda element: element[1], reverse=True)}
-    print(sorted_group)
+        group_dict.items(), key=lambda element: element[0], reverse=True)}
+    
     count = 0
     group_sum = 0
     for k, v in sorted_group.items():
@@ -164,5 +164,6 @@ def checkout(skus):
         
 
     
+
 
 
