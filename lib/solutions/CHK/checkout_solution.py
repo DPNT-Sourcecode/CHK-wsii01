@@ -96,6 +96,8 @@ def checkout(skus):
         disc_fac = sku_dict['N'] // eligible_N
         additional_disc = disc_fac * price['M']
         sku_dict['M'] -= additional_disc
+        if sku_dict['M'] < 0:
+            sku_dict['M'] = 0
 
     disc_fac = sku_dict['P'] // eligible_P
     sku_dict['P'] -= disc_fac * disc_P
@@ -126,3 +128,4 @@ def checkout(skus):
         
 
     
+
