@@ -123,13 +123,46 @@ def checkout(skus):
     if temp >= 100:
         additional_disc_fac = temp // 100
         sku_dict['V'] -= additional_disc_fac * 10
-    
+
+    group_dict = defaultdict(int)
+    group_dict[price['S']] += sku_dict['S'] / price['S']
+    group_dict[price['T']] += sku_dict['T'] / price['T']
+    group_dict[price['X']] += sku_dict['X'] / price['X']
+    group_dict[price['Y']] += sku_dict['Y'] / price['Y']
+    group_dict[price['Z']] += sku_dict['Z'] / price['Z']
+
+    total_group = 0
+    limit = 0
+    for v in group_dict.values():
+        total_group += v
+
+    remainder = total_group % 3
+    if total_group >= 3:
+        limit = total_group - remainder
+   
+    sorted_group = {k:v for k, v in sorted(
+        group_dict.items(), key=lambda element: element[1], reverse=True)}
+
+    count = 0
+    group_sum = 0
+    for k, v in sorted_group.items():
+        if count + v <= limit:
+            group_sum += k * v
+            count += v
+        else:
+            group_sum += (limit - count) * k
+            break;
+
+    group_disc_total = (limit / 3) * 45
+        
+            
     sum = 0
     for value in sku_dict.values():
         sum += value
 
-    return sum
+    return sum 
         
 
     
+
 
