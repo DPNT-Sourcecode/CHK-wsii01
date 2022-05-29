@@ -43,6 +43,7 @@ def checkout(skus):
     disc_H = 20
     disc_K = 10
     disc_P = 50
+    disc_Q = 10
 
     eligible_A = 250
     eligible_B = 60
@@ -96,6 +97,17 @@ def checkout(skus):
 
     disc_fac = sku_dict['P'] // eligible_P
     sku_dict['P'] -= disc_fac * disc_P
+
+    if sku_dict['Q'] > 0:
+        disc_fac = sku_dict['R'] // eligible_R
+        additional_disc = disc_fac * price['Q']
+        sku_dict['Q'] -= additional_disc
+        if sku_dict['Q'] > 0:
+            disc_fac = sku_dict['Q'] // eligible_Q
+            sku_dict['Q'] -= disc_fac * disc_Q
+
+    disc_fac = sku_dict['U'] // eligible_U
+    sku_dict['U'] -= disc_fac * price['F']
     
     sum = 0
     for value in sku_dict.values():
@@ -105,6 +117,7 @@ def checkout(skus):
         
 
     
+
 
 
 
