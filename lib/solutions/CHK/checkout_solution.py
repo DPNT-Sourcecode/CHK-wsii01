@@ -125,11 +125,11 @@ def checkout(skus):
         sku_dict['V'] -= additional_disc_fac * 10
 
     group_dict = defaultdict(int)
-    group_dict[price['S']] += sku_dict['S'] / price['S']
-    group_dict[price['T']] += sku_dict['T'] / price['T']
-    group_dict[price['X']] += sku_dict['X'] / price['X']
-    group_dict[price['Y']] += sku_dict['Y'] / price['Y']
-    group_dict[price['Z']] += sku_dict['Z'] / price['Z']
+    group_dict[price['S']] += sku_dict['S'] // price['S']
+    group_dict[price['T']] += sku_dict['T'] // price['T']
+    group_dict[price['X']] += sku_dict['X'] // price['X']
+    group_dict[price['Y']] += sku_dict['Y'] // price['Y']
+    group_dict[price['Z']] += sku_dict['Z'] // price['Z']
 
     total_group = 0
     limit = 0
@@ -160,9 +160,7 @@ def checkout(skus):
     for value in sku_dict.values():
         sum += value
 
-    return sum 
+    return sum - group_sum + group_disc_total
         
 
     
-
-
