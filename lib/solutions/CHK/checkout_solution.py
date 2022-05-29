@@ -113,10 +113,10 @@ def checkout(skus):
 
     disc_fac = sku_dict['V'] // eligible_V
     sku_dict['V'] -= disc_fac * disc_V
-    temp = sku_dict['V'] - ( 200 * disc_fac )
-    if temp >= 150:
-        additional_disc_fac = temp // 150
-        sku_dict['V'] -= additional_disc_fac * 20
+    temp = sku_dict['V'] - ( 130 * disc_fac )
+    if temp >= 100:
+        additional_disc_fac = temp // 100
+        sku_dict['V'] -= additional_disc_fac * 10
     
     sum = 0
     for value in sku_dict.values():
@@ -126,12 +126,3 @@ def checkout(skus):
         
 
     
-
-
-
-
-
-
-
-
-
