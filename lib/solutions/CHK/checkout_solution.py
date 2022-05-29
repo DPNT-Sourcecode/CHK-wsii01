@@ -39,11 +39,12 @@ def checkout(skus):
 
     disc_A = 50
     disc_B = 15
-    disc_F = price_F
+    disc_F = price['F']
     disc_H = 20
     disc_K = 10
     disc_P = 50
     disc_Q = 10
+    disc_U = price['U']
 
     eligible_A = 250
     eligible_B = 60
@@ -78,7 +79,7 @@ def checkout(skus):
             sku_dict['B'] -= disc_fac * disc_B
     
     disc_fac = sku_dict['F'] // eligible_F
-    sku_dict['F'] -= disc_fac * price_F
+    sku_dict['F'] -= disc_fac * price['F']
 
     disc_fac = sku_dict['H'] // eligible_H
     sku_dict['H'] -= disc_fac * disc_H
@@ -107,7 +108,7 @@ def checkout(skus):
             sku_dict['Q'] -= disc_fac * disc_Q
 
     disc_fac = sku_dict['U'] // eligible_U
-    sku_dict['U'] -= disc_fac * price['F']
+    sku_dict['U'] -= disc_fac * price['U']
     
     sum = 0
     for value in sku_dict.values():
@@ -117,6 +118,7 @@ def checkout(skus):
         
 
     
+
 
 
 
