@@ -15,8 +15,8 @@ def checkout(skus):
             if eligible >= 1:
                 sku_dict[item] -= eligible * 20
         if item == 'B':
-            sku_dic[item] += 30
-            eligible = sku_dic[item]/60
+            sku_dict[item] += 30
+            eligible = sku_dict[item]/60
             if eligible >= 1:
                 sku_dict[item] -= eligible *15
         if item == 'C':
@@ -32,4 +32,3 @@ def checkout(skus):
         
 
     
-
