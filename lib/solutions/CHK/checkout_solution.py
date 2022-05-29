@@ -15,6 +15,26 @@ def checkout(skus):
     price_D = 15
     price_E = 40
     price_F = 10
+    price_G = 20
+    price_H = 10
+    price_I = 35
+    price_J = 60
+    price_K = 80
+    price_L = 90
+    price_M = 15
+    price_N = 40
+    price_O = 10
+    price_P = 50
+    price_Q = 30
+    price_R = 50
+    price_S = 30
+    price_T = 20
+    price_U = 40
+    price_V = 50
+    price_W = 20
+    price_X = 90
+    price_Y = 10
+    price_Z = 50
 
     disc_A = 50
     disc_B = 15
@@ -24,6 +44,14 @@ def checkout(skus):
     eligible_B = 60
     eligible_E = 80
     eligible_F = 30
+    eligible_H = 100
+    eligible_K = 160
+    eligible_N = 120
+    eligible_P = 250
+    eligible_Q = 90
+    eligible_R = 150
+    eligible_U = 120
+    eligible_V = 150
     
     sku_dict = defaultdict(int)
     for item in skus:
@@ -66,6 +94,7 @@ def checkout(skus):
         
 
     
+
 
 
 
