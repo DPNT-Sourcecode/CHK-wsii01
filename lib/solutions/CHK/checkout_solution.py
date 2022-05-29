@@ -75,6 +75,8 @@ def checkout(skus):
         disc_fac = sku_dict['E'] // eligible_E
         additional_disc = disc_fac * price['B']
         sku_dict['B'] -= additional_disc
+        if sku_dict['B'] < 0:
+            sku_dict['B'] = 0
         if sku_dict['B'] > 0:
             disc_fac = sku_dict['B'] // eligible_B
             sku_dict['B'] -= disc_fac * disc_B
@@ -106,6 +108,8 @@ def checkout(skus):
         disc_fac = sku_dict['R'] // eligible_R
         additional_disc = disc_fac * price['Q']
         sku_dict['Q'] -= additional_disc
+        if sku_dict['Q'] < 0:
+            sku_dict['Q'] = 0
         if sku_dict['Q'] > 0:
             disc_fac = sku_dict['Q'] // eligible_Q
             sku_dict['Q'] -= disc_fac * disc_Q
@@ -128,4 +132,5 @@ def checkout(skus):
         
 
     
+
 
