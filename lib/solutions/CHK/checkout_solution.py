@@ -41,12 +41,14 @@ def checkout(skus):
     if temp >= 150:
         additional_disc_fac = temp // 150
         sku_dict['A'] -= additional_disc_fac * 20
-    disc_fac = sku_dict['B'] // eligible_B
-    sku_dict['B'] -= disc_fac * disc_B
+    
     if sku_dict['B'] > 0:
         disc_fac = sku_dict['E'] // eligible_E
         additional_disc = disc_fac * price_B
         sku_dict['B'] -= additional_disc
+        if sku_dick['B'] > 0:
+            disc_fac = sku_dict['B'] // eligible_B
+            sku_dict['B'] -= disc_fac * disc_B
     
     
     sum = 0
@@ -57,3 +59,4 @@ def checkout(skus):
         
 
     
+
